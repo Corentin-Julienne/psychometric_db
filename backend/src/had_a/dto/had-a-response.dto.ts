@@ -4,29 +4,29 @@ export class HadAResponseDto {
 
 	@IsNumber()
 	@IsNotEmpty()
-	question1: number;
+	item_1: number;
 
 	@IsNumber()
 	@IsNotEmpty()
-	question2: number;
+	item_2: number;
 
 	@IsNumber()
 	@IsNotEmpty()
-	question3: number;
+	item_3: number;
 
 	@IsNumber()
 	@IsNotEmpty()
-	question4: number;
+	item_4: number;
 
 	@IsNumber()
 	@IsNotEmpty()
-	question5: number;
+	item_5: number;
 
 	@IsNumber()
 	@IsNotEmpty()
-	question6: number;
+	item_6: number;
 
 	@IsNumber()
 	@IsNotEmpty()
-	question7: number;
+	item_7: number;
 }

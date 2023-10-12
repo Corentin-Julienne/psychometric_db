@@ -1,5 +1,5 @@
 import { Controller, Post, Body } from '@nestjs/common';
-import { HadAService } from './had_a.service';
+import { HadAService } from './had-a.service';
 import { HadAResponseDto } from './dto/had-a-response.dto';
 
 @Controller('had-a')
