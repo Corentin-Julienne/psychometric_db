@@ -1,0 +1,10 @@
+<div class="fixed inset-0 flex items-center justify-center" *ngIf="isOpen">
+	<div class="absolute inset-0 bg-black opacity-50"></div>
+	<div class="relative bg-white p-6 rounded-lg shadow-lg max-w-md w-full z-10">
+	  	<h2 class="text-xl font-semibold mb-4">{{title}}</h2>
+	  	<ng-content></ng-content>
+	  	<div class="mt-4">
+			<button (click)="close()" class="text-blue-500">Close</button>
+	  	</div>
+	</div>
+</div>
