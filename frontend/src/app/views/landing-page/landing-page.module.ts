@@ -3,6 +3,8 @@ import { CommonModule } from "@angular/common";
 import { LandingPageComponent } from "./landing-page/landing-page.component";
 import { HeaderLpComponent } from './header-lp/header-lp.component';
 import { LandingPageRoutingModule } from './landing-page-routing.module';
+import { SharedModule } from '../../shared/shared.module';
+import { ReactiveFormsModule } from "@angular/forms";
 
 @NgModule({
 	declarations: [
@@ -11,6 +13,8 @@ import { LandingPageRoutingModule } from './landing-page-routing.module';
 	],
 	imports: [
 		CommonModule,
+		SharedModule,
+		ReactiveFormsModule,
 		LandingPageRoutingModule
 	],
 	exports: [

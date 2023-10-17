@@ -7,7 +7,11 @@
 			<button>Sign Up</button>
 		</div>
 		<div>
-			<p>Sign In</p>
+			<p (click)="openModal()">Sign In</p>
 		</div>
 	</div>
 </div>
+
+<app-custom-modal [isOpen]="modalIsOpen" (onClose)="closeModal()" [title]="'Sign Up'">
+	
+</app-custom-modal>
