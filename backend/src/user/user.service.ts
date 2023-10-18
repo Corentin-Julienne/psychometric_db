@@ -9,8 +9,7 @@ import { Repository } from 'typeorm';
 @Injectable()
 export class UserService {
 
-	constructor(@InjectRepository(User) 
-				private userRepository: Repository<User>) {};
+	constructor(@InjectRepository(User) private userRepository: Repository<User>) {};
 	
 	async register(userDto: RegisterUserDto) {
 		const hashedPassword: string = await bcrypt.hash(userDto.password, 12);
@@ -23,5 +22,9 @@ export class UserService {
 
 	async login(userDto: LoginUserDto) {
 
+	}
+
+	async findUserByUsername(username: string) : Promise<User | undefined> {
+		return await this.userRepository.findOne({ where: {username} });
 	}
 }
