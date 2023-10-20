@@ -1,0 +1,39 @@
+version: '3.8'
+
+services:
+
+  frontend:
+    image: node:latest
+    working_dir: /app
+    command: ng serve
+    volumes:
+      - ./frontend:/app
+      - /app/node_modules
+    ports:
+      - 4200:4200
+    environment:
+      - NODE_ENV=development
+
+  backend:
+    image: node:latest
+    working_dir: /app
+    command: npm run start:dev
+    volumes: 
+      - ./backend:/app
+      - /app/node node_modules
+    ports:
+      - 3000:3000
+    environment:
+      - 
+    depends_on:
+      - db
+
+  db:
+    image: postgres:latest
+    environment:
+      - 
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+  
+volumes:
+  pgdata
